@@ -41,7 +41,7 @@ class DetectorDataset(torch.utils.data.Dataset):
 
 
 def create_dataloader(args):
-    with open(os.path.join(root, "labels.txt")) as f:
+    with open(os.path.join(args.root, "labels.txt")) as f:
         labels = f.readlines()
     labels = [label_.replace("\n", "") for label_ in labels]
     def get_target_(xml_path): return get_target(xml_path, labels)
