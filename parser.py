@@ -19,7 +19,7 @@ def create_parser():
     parser.add_argument("--lr", type=float, default=0.005,
                         help="Learning Rate")
     parser.add_argument("--optim", type=str,
-                        choices=["SGD", "Adam"], default="SGD", help="Optimizer")
+                        choices=["sgd", "adam"], default="sgd", help="Optimizer")
     parser.add_argument("--gpu", action="store_true",
                         dest="gpu", help="Use GPU")
     parser.add_argument(
